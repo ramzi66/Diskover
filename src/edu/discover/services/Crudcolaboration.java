@@ -25,6 +25,7 @@ import java.util.stream.Collectors;
 public class Crudcolaboration implements IService<Colaborationevent> {
 
     Connection cnx = Datasource.getInstance().getCnx();
+    public Crudcolaboration(){}
 
     @Override
     public void ajout(Colaborationevent t) {
@@ -56,12 +57,11 @@ public class Crudcolaboration implements IService<Colaborationevent> {
 
     
     
-    @Override
-    public void supprimer(int id) {
+    public void supprimer(String nom) {
         try {
-            String req = "DELETE FROM `colaborationevent` WHERE IdEvent = ? ";
+            String req = "DELETE FROM `colaborationevent` WHERE NomEvent = ? ";
             PreparedStatement st = cnx.prepareStatement(req);
-            st.setInt(1, id);
+            st.setString(1, nom);
             st.executeUpdate();
             System.out.println("_______________________");
             System.out.println("Colab deleted!!");
@@ -74,10 +74,10 @@ public class Crudcolaboration implements IService<Colaborationevent> {
     
     
     @Override
-    public void modifier(Colaborationevent t) {
+    public void modifier(Colaborationevent t,String s) {
         try {
 
-            String req = "UPDATE `colaborationevent` SET `NomEvent`= ?,`DateEvent`= ?,`AdresseEvent`= ?,`NbrPlaceVehicule`= ?,`PrixVehiculeEvent`= ? WHERE IdEvent = 3 ";
+            String req = "UPDATE `colaborationevent` SET `NomEvent`= ?,`DateEvent`= ?,`AdresseEvent`= ?,`NbrPlaceVehicule`= ?,`PrixVehiculeEvent`= ? WHERE NomEvent ='"+s+"' ";
             PreparedStatement ps = cnx.prepareStatement(req);
             ps.setString(1, t.getNomevent());
             ps.setDate(2, t.getDateevent());
@@ -122,7 +122,10 @@ public class Crudcolaboration implements IService<Colaborationevent> {
     
     
     @Override
-    public List<Colaborationevent> getAll() {
+    public List<Colaborationevent> getAll()
+ {
+        
+
         List<Colaborationevent> colaboration = new ArrayList<>();
         try {
             String req = "SELECT * FROM `colaborationevent`";
@@ -137,13 +140,37 @@ public class Crudcolaboration implements IService<Colaborationevent> {
                         result.getInt("PrixVehiculeEvent")
                 );
                 colaboration.add(rec);
+                
             }
             
         } catch (SQLException ex) {
             System.err.println(ex.getMessage());
         }
+        
         return colaboration;
     }
+    
+    
+    
+    
+    
+    public  List<Colaborationevent> selectAll() throws SQLException {
+        //LIST
+        List<Colaborationevent> arrayList = new ArrayList<>();
+        //request 
+        String req ="SELECT * FROM colaborationevent ";
+
+            //insert
+            Statement st = cnx.createStatement();
+            ResultSet rs = st.executeQuery(req);
+            while(rs.next())
+            {
+                arrayList.add(new Colaborationevent(rs.getInt(1),rs.getString(2),rs.getDate(3),rs.getString(4),rs.getInt(5),rs.getInt(6)));
+            }
+        return arrayList;
+
+    }
+    
     
     
     
@@ -168,5 +195,10 @@ public class Crudcolaboration implements IService<Colaborationevent> {
        
        
    }
+
+    @Override
+    public void supprimer(Colaborationevent t) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

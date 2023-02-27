@@ -14,7 +14,24 @@ import java.util.Objects;
 public class Reservationevent {
     private int idresrvation;
     private String nomclient;
-    private int nbrclient;   
+    private int nbrclient; 
+    private Colaborationevent colab;
+
+    public Reservationevent(int idresrvation, String nomclient, int nbrclient, Colaborationevent colab) {
+        this.idresrvation = idresrvation;
+        this.nomclient = nomclient;
+        this.nbrclient = nbrclient;
+        this.colab = colab;
+    }
+
+    public Colaborationevent getColab() {
+        return colab;
+    }
+
+    public void setColab(Colaborationevent colab) {
+        this.colab = colab;
+    }
+    
 
     
     //constructeur 
@@ -27,11 +44,13 @@ public class Reservationevent {
         this.nbrclient = nbrclient;
     }
 
-    public Reservationevent(int idresrvation, String nomclient, int nbrclient) {
-        this.idresrvation = idresrvation;
+    public Reservationevent(String nomclient, int nbrclient, Colaborationevent colab) {
         this.nomclient = nomclient;
         this.nbrclient = nbrclient;
+        this.colab = colab;
     }
+
+    
 
     
     
@@ -61,8 +80,10 @@ public class Reservationevent {
 
     @Override
     public String toString() {
-        return "Reservationevent{" + "nomclient=" + nomclient + ", nbrclient=" + nbrclient + '}';
+        return "Reservationevent{" + "nomclient=" + nomclient + ", nbrclient=" + nbrclient + ", colab=" + colab + '}';
     }
+
+   
 
     @Override
     public int hashCode() {

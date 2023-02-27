@@ -43,6 +43,10 @@ public class Datasource {
         return cnx;
     }
 
+    public Connection getConnection() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 
 
 }

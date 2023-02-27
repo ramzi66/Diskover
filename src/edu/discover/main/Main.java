@@ -51,15 +51,26 @@ public class Main {
 
               
        //**********************************************************************RESERVATION*****************************************************************************    
-      Reservationevent r = new Reservationevent("lotfi",2);
+     Colaborationevent col = new Colaborationevent("eya", Date.valueOf("2017-02-28"), "aaaa", 2, 1);
+       Reservationevent r = new Reservationevent("azi",5,col);
       Crudreservation cr = new Crudreservation();
-      cr.ajout(r);
-      cr.supprimer(1);
+      Crudcolaboration cl = new  Crudcolaboration();
+      //cl.ajout(col);
+      //cr.ajout(r);
+      cr.supprimer(r);
       
-      Reservationevent rr = new Reservationevent("ghasen",5);
-      cr.modifier(rr);
+ 
+      Colaborationevent col2 =new Colaborationevent("eyaaaaaaaaaaaaaa", Date.valueOf("2017-02-28"), "aaaa", 2, 1);
+      Reservationevent rr = new Reservationevent("azi",5,col2);
+     cl.modifier(col2,"iheb");
+      cr.modifier(rr,"Iheb");
+    
+      System.out.println(cr.getOneById(41));
+    
+          
       
-      System.out.println(cr.getOneById(4));
+      
+      
       
       System.out.println("_______________________");
        System.out.println("Affichage Tous reservation :");

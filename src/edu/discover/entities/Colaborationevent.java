@@ -47,6 +47,10 @@ public class Colaborationevent {
         this.prixvehiculeevent = prixvehiculeevent;
     }
 
+    public Colaborationevent(String nomevent) {
+        this.nomevent = nomevent;
+    }
+
     
     
     

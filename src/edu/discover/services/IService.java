@@ -13,8 +13,8 @@ import java.util.List;
  */
 public interface IService<T> {
     public void ajout(T t);
-    public void supprimer(int id);//(T t) just ahna bch nfaskhou kn mil id mch mn kol chy 
-    public void modifier (T t);
+    public void supprimer(T t);//(T t) just ahna bch nfaskhou kn mil id mch mn kol chy 
+    public void modifier (T t,String s);
     public T getOneById(int id);
     public List<T> getAll();
 
