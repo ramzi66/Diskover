@@ -22,6 +22,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -50,6 +51,8 @@ public class EvenementController implements Initializable {
     private Button afficher;
     @FXML
     private TableView<?> tableView;
+    @FXML
+    private TextField search;
 
     
     @FXML
@@ -61,6 +64,7 @@ public class EvenementController implements Initializable {
         stage.setScene(newScene);
         stage.show();
     }
+    
   
     
     
@@ -71,7 +75,6 @@ public class EvenementController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
-@FXML
     public void showsEvents(ActionEvent event) {
         //   Crudcolaboration sr = new Crudcolaboration();
         Crudcolaboration sr = new Crudcolaboration();

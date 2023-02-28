@@ -3,13 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/main/Main.java</file>
-            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/services/Crudcolaboration.java</file>
-            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/services/Crudreservation.java</file>
+            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/gui/MailingController.java</file>
+            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/gui/EvenementController.java</file>
+            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/gui/Evenement.java</file>
+            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/gui/AjouterReservation.fxml</file>
+            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/gui/Mailing.fxml</file>
             <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/gui/ListeReservationController.java</file>
+            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/gui/AjouterReservation.java</file>
             <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/gui/Colabevent.java</file>
-            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/entities/Colaborationevent.java</file>
-            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/services/IService.java</file>
+            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/gui/AjouterReservationController.java</file>
+            <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/gui/ListeReservation.java</file>
             <file>file:/C:/Users/ramzi/OneDrive/Bureau/Pidiscoverr/src/edu/discover/gui/AffichereservationController.java</file>
         </group>
     </open-files>
